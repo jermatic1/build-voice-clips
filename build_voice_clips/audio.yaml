@@ -1,0 +1,21 @@
+# Model pin and inference settings shared by every asset.
+model:
+  repo_id: nvidia/magpie_tts_multilingual_357m
+  # v2607 release branch, pinned to the exact commit so the checkpoint cannot change.
+  revision: 5023df68bd3f5b5ce6d666a50979bc501af145cc
+  filename: magpie_tts_multilingual_357m.nemo
+  sha256: ec675fa8c02b9c1d5382c5c2b5a6acec6492c1e8344866c07cf3892185d18953
+
+inference:
+  language: en
+  speaker: Sofia
+  use_cfg: true
+  # Overrides for the checkpoint's own inference parameters. These apply to every
+  # asset. Checkpoint defaults: temperature 0.6, topk 80, cfg_scale 2.5,
+  # attention_sink_threshold 4.
+  model_params:
+    temperature: 0.6
+    topk: 80
+    cfg_scale: 2.5
+    attention_sink_threshold: 4
+  seed: 1234

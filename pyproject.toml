@@ -1,0 +1,34 @@
+[project]
+name = "build-voice-clips"
+version = "0.1.0"
+description = "Build Ogg Vorbis voice clips from a YAML sounds file with NVIDIA MagpieTTS"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "nemo-toolkit[tts]==3.0.0",
+    "kaldialign>=0.9",
+    "torch>=2.7",
+    "torchaudio>=2.7",
+    "huggingface-hub>=0.30",
+    "pyyaml>=6.0",
+    "soundfile>=0.12",
+    "numpy",
+]
+
+[project.scripts]
+build-voice-clips = "build_voice_clips.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11,<0.12"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.uv.build-backend]
+module-root = ""

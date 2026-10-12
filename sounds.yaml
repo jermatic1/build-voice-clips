@@ -1,0 +1,81 @@
+# Clips to generate. Each group becomes an output subdirectory and each clip key
+# becomes the file name, so output/<speaker>/letters/a.ogg comes from letters → a.
+# A clip is spoken from `text`, or from `ipa`: space-separated symbols, each a
+# single token in the model's English phoneme vocabulary. Write diphthongs and
+# affricates as two symbols ("a ɪ", "t ʃ"), use "ɡ" not "g" and "ɹ" not "r", no
+# length mark, and start every span with the stress mark "ˈ". A group's `suffix`
+# is appended to every prompt; ".." keeps isolated letters from stuttering.
+groups:
+  letters:
+    suffix: ".."
+    clips:
+      a: {ipa: "ˈ ɛ ɪ"}
+      b: {ipa: "ˈ b i"}
+      c: {ipa: "ˈ s i"}
+      d: {ipa: "ˈ d i"}
+      e: {ipa: "ˈ i"}
+      f: {ipa: "ˈ ɛ f"}
+      g: {ipa: "ˈ d ʒ i"}
+      h: {ipa: "ˈ e ɪ t ʃ"}
+      i: {ipa: "ˈ a ɪ"}
+      j: {ipa: "ˈ d ʒ e ɪ"}
+      k: {ipa: "ˈ k e ɪ"}
+      l: {ipa: "ˈ ɛ l"}
+      m: {ipa: "ˈ ɛ m"}
+      n: {ipa: "ˈ ɛ n"}
+      o: {ipa: "ˈ o ʊ"}
+      p: {ipa: "ˈ p i"}
+      q: {ipa: "ˈ k j u"}
+      r: {ipa: "ˈ ɑ ɹ"}
+      s: {ipa: "ˈ ɛ s"}
+      t: {ipa: "ˈ t i"}
+      u: {ipa: "ˈ j u"}
+      v: {ipa: "ˈ v i"}
+      w: {ipa: "ˈ d ʌ b ə l j u"}
+      x: {ipa: "ˈ ɛ k s"}
+      y: {ipa: "ˈ w a ɪ"}
+      z: {ipa: "ˈ z i"}
+  numbers:
+    clips:
+      "01": {text: one}
+      "02": {text: two}
+      "03": {text: three}
+      "04": {text: four}
+      "05": {text: five}
+      "06": {text: six}
+      "07": {text: seven}
+      "08": {text: eight}
+      "09": {text: nine}
+      "10": {text: ten}
+      "11": {text: eleven}
+      "12": {text: twelve}
+      "13": {text: thirteen}
+      "14": {text: fourteen}
+      "15": {text: fifteen}
+      "16": {text: sixteen}
+      "17": {text: seventeen}
+      "18": {text: eighteen}
+      "19": {text: nineteen}
+      "20": {text: twenty}
+  phrases:
+    clips:
+      welcome: {text: "Welcome!"}
+      lets_play: {text: "Let's play!"}
+      press_any_key: {text: "Press any key to start."}
+      find_the_letter: {text: "Find the letter."}
+      find_the_number: {text: "Find the number."}
+      press_the_letter: {text: "Press the letter."}
+      great_job: {text: "Great job!"}
+      well_done: {text: "Well done!"}
+      awesome: {text: "Awesome!"}
+      you_did_it: {text: "You did it!"}
+      excellent: {text: "Excellent!"}
+      nice_work: {text: "Nice work!"}
+      thats_right: {text: "That's right!"}
+      try_again: {text: "Try again!"}
+      not_quite: {text: "Not quite. Try again!"}
+      almost: {text: "Almost!"}
+      keep_going: {text: "Keep going!"}
+      one_more: {text: "One more!"}
+      all_done: {text: "All done!"}
+      goodbye: {text: "Goodbye! See you next time."}
